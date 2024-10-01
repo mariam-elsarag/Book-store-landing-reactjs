@@ -3,14 +3,11 @@ import Button from "../components/Button";
 
 const PageNotFound = () => {
   useEffect(() => {
-    // Dynamically append the Lottie player script
     const script = document.createElement("script");
     script.src =
       "https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs";
     script.type = "module";
     document.body.appendChild(script);
-
-    // Clean up the script when component unmounts
     return () => {
       document.body.removeChild(script);
     };
